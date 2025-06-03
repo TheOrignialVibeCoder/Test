@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All - Essential Form Goods</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-soft-white text-deep-charcoal font-body flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-soft-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-logo font-medium text-deep-charcoal">
+                    Essential Form Goods
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-muted-forest transition-colors">Home</a>
+                    <a href="shop_all.html" class="nav-link text-muted-forest transition-colors" aria-current="page">Shop All</a>
+                    <div class="relative group">
+                        <button id="collections-desktop-button" class="nav-link hover:text-muted-forest transition-colors flex items-center">
+                            Collections <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div id="collections-desktop-dropdown" class="absolute hidden group-hover:block bg-soft-white shadow-lg py-2 rounded-md mt-1 w-48 border border-light-grey">
+                            <a href="placeholder_pages/tumblers.html" class="block px-4 py-2 text-sm text-deep-charcoal hover:bg-light-grey/50 transition-colors">Tumblers</a>
+                            <a href="placeholder_pages/bottles.html" class="block px-4 py-2 text-sm text-deep-charcoal hover:bg-light-grey/50 transition-colors">Bottles</a>
+                            <a href="placeholder_pages/mugs.html" class="block px-4 py-2 text-sm text-deep-charcoal hover:bg-light-grey/50 transition-colors">Mugs</a>
+                        </div>
+                    </div>
+                    <a href="placeholder_pages/about_us.html" class="nav-link hover:text-muted-forest transition-colors">About Us</a>
+                     <a href="#" id="cart-icon-desktop" class="relative nav-link hover:text-muted-forest transition-colors">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                        <span id="cart-item-count-desktop" class="cart-badge">0</span>
+                    </a>
+                </nav>
+                <div class="flex items-center md:hidden">
+                     <a href="#" id="cart-icon-mobile" class="relative nav-link hover:text-muted-forest transition-colors mr-4">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                        <span id="cart-item-count-mobile" class="cart-badge">0</span>
+                    </a>
+                    <button id="mobile-menu-button" aria-label="Open menu">
+                        <i data-lucide="menu" class="w-7 h-7 text-deep-charcoal"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-soft-white shadow-lg py-2 border-t border-light-grey">
+            <a href="index.html" class="block px-4 py-3 text-deep-charcoal hover:bg-light-grey/50 transition-colors">Home</a>
+            <a href="shop_all.html" class="block px-4 py-3 text-muted-forest hover:bg-light-grey/50 transition-colors" aria-current="page">Shop All</a>
+            <div>
+                <button id="collections-mobile-button" class="w-full text-left flex justify-between items-center px-4 py-3 text-deep-charcoal hover:bg-light-grey/50 transition-colors">
+                    Collections <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+                <div id="collections-mobile-dropdown" class="hidden pl-4">
+                    <a href="placeholder_pages/tumblers.html" class="block px-4 py-2 text-sm text-deep-charcoal hover:bg-light-grey/50 transition-colors">Tumblers</a>
+                    <a href="placeholder_pages/bottles.html" class="block px-4 py-2 text-sm text-deep-charcoal hover:bg-light-grey/50 transition-colors">Bottles</a>
+                    <a href="placeholder_pages/mugs.html" class="block px-4 py-2 text-sm text-deep-charcoal hover:bg-light-grey/50 transition-colors">Mugs</a>
+                </div>
+            </div>
+            <a href="placeholder_pages/about_us.html" class="block px-4 py-3 text-deep-charcoal hover:bg-light-grey/50 transition-colors">About Us</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex-grow">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-heading font-medium text-deep-charcoal mb-6">
+                Shop All
+            </h1>
+            <p class="text-lg text-mid-grey max-w-2xl mx-auto">
+                Discover our complete collection of premium drinkware, designed for mindful living and everyday excellence.
+            </p>
+        </div>
+
+        <!-- Product Grid with Professional Photos -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+            
+            <!-- Product 1: 40oz Stainless Steel Tumbler -->
+            <div class="bg-white border border-light-grey/80 rounded-lg shadow-sm p-4 flex flex-col group text-center transition-all hover:shadow-lg hover:-translate-y-1">
+                <a href="pdp_40oz_tumbler.html" class="block mb-4">
+                    <div class="aspect-square bg-stone-100 rounded-md overflow-hidden p-2">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAP1BMVEUAAAD///8vLy8lJSVGRkZQUFBZWVloaGhxcXF6enqDg4OMjIyVlZWenp6np6ewsLC5ubm/v7/Hx8fPz8/X19f//uiGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAJM0lEQVR4nO2d67qbMAiAkxBuVsHa7v2f9YxO7bCjNYGkAeb3t2fa5aQJEOzr91NTU1NTU1NTU1NTU1NTU1NTU1NT/i/LNpsWGVFcsLULm5p7J2t5fshSZd7e3Mg8aJjXNcjx9rZu3t7XzOsd8+ek1BNs7u7t7Y18qm2SJVqnKPx7TF8pLN8s4ZAkD7eUoR7egtQrMW3sIpw8CYf/Ck3+lWnRSWtqZqjdJCJy06mNYVeZQG6h0LGLIGDsUaFfFyK8eZpv4e7k7FvLQaGUr3o2FKVXgKfYN9VFJ4vwSvELqxOYPKjrrnKSd08fO3aZvt3VUL4MWbHdI/KOdF3KJnPc9h+Zn35z/7GKp4J2xHm4u8NNNy3jfmK2t7FRpfzG7F6fnyp/qwLddWXKJnJ7z2m2WbJf8dRgv5Xn+Xpr0O0y0E6aJ/ePqPpb9oYn2CJo7LPwfEmnb9Vpp/x+ZL5K3pHOzB35H+x+3oTpA4nveHZLvTPDhH55R49uU9M8a1/WvaPNx7lhU4/W5+fxYDDlJFP8njZ3ZHtddbRtk2K0btZe4aNl1W2bFJv0x5jcVx+bNGBuZe1jOqN+3sOEe7M9TJhbbPK2xpKg98o/5sdOgYVU1KXO7q8sLNyWjKH9uKlrz4T/ZrnN8uRKo6AZrWBBYKJ3ZwStLaQG+DuN5hKFIcBrtHeVdEwIvU07t09kL9sDaTb1HuJqXqMZbPYv7EV0kX0lA6LbR3J5BXNM9Jn/q7Lk2C2pJ+1zMthVvP5rTXnKHq1d2f8OmqOh3I+NHl3qfKUV0kR8v4SFJpZPv7hJ3Z/DJK8o5RO6b0o/kDMoGkfZqMf8Q5V/TdqWJLUktv82YYP9f+VhXOIqlJ6z9hpG0A7vECY9ddLJMHwP6Q4KLRdwuzWnKUftA2K5KgB5QJK5mV+W8/K5Rrl1/HMxT5L+WdwdlQbh4yRiJxCvX24bv5f3oJp6LZhgNdotx8FQ8aZpZvNO0RKJiOhIXwhtaNi6t+j8vNZGSW8f+Xjvr7O1g3z++3yK4gOZu8XZGnJJY/dQyJh6DYklqeajczBaU6hyR4+w8hEJiOhjd+O6MJEJiNhwZsC9OEhCQ2FdvgPgycz0b6CIzfzd7uNrDgapqw7JnVRqBQF7yWFj1/8/TJr67D6h3t3YpIQBz/uYqKxhPj6kh6hJArz3LYh9j5hT/lhPbFdPx6bvEOYvN1qe4qKyZaKGEy8Q2ht2Cj+tX9DPQhfJOJW/fOdJbS6KTt7lD37MnOmU1sN9XFDlkAKXpyKPavfqTKJoFV/3vJGCnPwRsWekH6vgKNRwvBG/SxZAl3BJTQM9kS1hZdQ5H6WLKWgS2jRCKI/Cz1DQ5dQr9BrF4Hc+dQIqVIQ2O8UYHJ/6zRVKiuG6VIdz8rU+cQF3oNCSr4eP3gHhb1SJMUws49BgNuPLaQKVXRrX6vd3wRuVUIVqmzgmNJGh9BWpbUOcFdCFaps4CiVOeGV+kCtlN7AmWm6T6U/Qq0y9Aj9EV4Z8E6FdAp9IbwyQqq0ZNwVcudQpbIO4ZVhx9DdBPqELt1eqVJCJ0ylSksOQE+Eej1nRSLFLmLyKE3dpL3/hY/QVqWNJFw8DYLPTCOgLnhEu3AvaNRdU+BG5R0iJwVp3CXAWJJCjSKMEGnEJQpR6KfSVdBRaI6IIb4+sGYSBeBe/SMKfV4Zt9Fa5+DlGcLFXQuQQnOEKPTXhYdgKTSni6JBCl0q3Yg1lFKJ0jZNqFBzKjRmrKGUSrwbBbhX3wjtYrWOl9DcR4FdOFWoVIYSa3Yp7Mh3+y/hZ6iPhyNhsIz6F24N1fFwJOwVmhOhKjROhLVC47YQq1DVJRqlQqUylBjyTXXcdY1UtRtVCqMRULMbBbpRZe1QWfMJdKOqQoWPqZq8Q/LMNIcCjUKfSh+sJ0pJyNE9Cv0qfW9uCwxhZa4o3K9Jz2q/JbRX7VL5oT4fv15CGHAwtfj7yMWsKCSs5pGwVEhYzSNhqZCwmkfCUiFhNY+ExULCah4JS4UQVvNIWCokrOaRsFRIWM0jYamQsJpHwlIhYTWPhKVCwmoeCV6FWVKEqbT5H9pBYd1QIJGKFIKTtJ4PJKxUQShSKAjBLJoKFBJW80h4gL3p+rJ3kFvTHBpOGRYlrJEJkQFnpgHvKtCBhLvQIhPhCJnJGPAZBRJus1uZXEKFFKyQCZ5EBsw0MmCtjISz7L3hf5AwdwWzsACZNSPhleFBucNvmCZGApuZBrUNAdkfhNPpLNjMNNiNAuz2P8CpOJhHH5E3aoyQ2F5vQPFnGfV+NWKYFuRJODK5WVJhxVG5kbVhFt7Lgs8rCNJRZyaV7dKRAuJChSqGJMVqjOL29xfMZEGUKhRy2HNdFOHxnRWLwvNJBTzBz6xYFJ4X6OHxnRVBhSFn3nwJy2+rOzSb0RJWfOYLKEfGOBcJQa6VAf5j9wVwrYx5LhKCXCsD/ynwBXCtjHkOO3c6I/QNw/Uz1yMcIc9hB+baGFfKuNMZ2IcfmOu/VZXhGFnGUQKg/xAJQa6VAf5KmRFSffCZaYBfKTPCbZxrZUYYdhFgZppxGSJSCHOtDPKbGEZY86Af/wZ7rYwQBnw/AhLCXCvjJNw7gEJQa6RdcO6q7TjXyriEpSLZRrhWZoSlKtlGuFYG+bV9OJQQi3N9gNJQm5ArqSzNdyqfQ5jCOQ5CirLUJuRKKkujNBKGLWtJOJvtXGJLCFctJT8pELJssw8iKrcG8Ek5E55dGjZXh1Tm7HGdG2GtDLNLCJ2u3QFjRTgfDJWPK5e9lJRXhDNBlWGvGAOcuOZcOLpMfnCnRXGdTJPCUdFgJCNwuCzuR1j9T9JvQUBNJeKvqpOu30HnlN+yjGJf8ZIRRyEw5PKj7Cci7zDL35aR7EWxQLnEgGWKZ/Ndn/4rGVHoInHUj4jlv7yUhOStlHCT95TlrJwQwOKCPe6OIrSZJokUy5l3QlOzJU2cWQCk6c2WECJZ8aI1QJB8rU1C7HRFe0bKu8xLVE0hL6l2xdEU2Y1f7TYusL9tPAr5qH3qhZtCtYoF5y5K28aT8H+OVCB9xqpobgAAAABJRU5ErkJggg==" 
+                             alt="40oz Stainless Steel Tumbler" 
+                             class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                </a>
+                <h3 class="text-lg font-heading font-medium text-deep-charcoal mb-1">
+                    <a href="pdp_40oz_tumbler.html" class="hover:text-muted-forest transition-colors">40oz Stainless Steel Tumbler</a>
+                </h3>
+                <p class="text-base text-mid-grey mb-3">$21.84</p>
+                <div class="mt-auto pt-3">
+                    <a href="pdp_40oz_tumbler.html" class="inline-block w-full bg-soft-white border border-mid-grey text-mid-grey font-medium py-2 px-4 rounded-md hover:bg-light-grey/50 hover:border-deep-charcoal hover:text-deep-charcoal transition-all duration-200 text-sm mb-2">
+                        View Details
+                    </a>
+                    <button 
+                        data-product-id="tumbler40oz"
+                        data-product-name="40oz Stainless Steel Tumbler"
+                        data-product-price="21.84"
+                        data-product-image="data:image/png;base64,..."
+                        class="add-to-cart-btn w-full bg-muted-forest text-soft-white font-medium py-2.5 px-4 rounded-md hover:opacity-90 transition-opacity text-sm flex items-center justify-center">
+                        <i data-lucide="shopping-cart" class="w-4 h-4 mr-1.5"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2: Insulated Stainless Steel Bottle -->
+            <div class="bg-white border border-light-grey/80 rounded-lg shadow-sm p-4 flex flex-col group text-center transition-all hover:shadow-lg hover:-translate-y-1">
+                <a href="pdp_ss_bottle.html" class="block mb-4">
+                    <div class="aspect-square bg-stone-100 rounded-md overflow-hidden p-2">
+                        <img src="data:image/png;base64,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" 
+                             alt="Insulated Stainless Steel Bottle" 
+                             class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                </a>
+                <h3 class="text-lg font-heading font-medium text-deep-charcoal mb-1">
+                    <a href="pdp_ss_bottle.html" class="hover:text-muted-forest transition-colors">Insulated Stainless Steel Bottle</a>
+                </h3>
+                <p class="text-base text-mid-grey mb-1">$18.00 - $20.00</p>
+                <p class="text-xs text-mid-grey mb-3">Std. size $19.00</p>
+                <div class="mt-auto pt-3">
+                     <a href="pdp_ss_bottle.html" class="inline-block w-full bg-soft-white border border-mid-grey text-mid-grey font-medium py-2 px-4 rounded-md hover:bg-light-grey/50 hover:border-deep-charcoal hover:text-deep-charcoal transition-all duration-200 text-sm mb-2">
+                        View Details
+                    </a>
+                    <button 
+                        data-product-id="ssbottle"
+                        data-product-name="Insulated Stainless Steel Bottle"
+                        data-product-price="19.00"
+                        data-product-image="data:image/png;base64,..."
+                        class="add-to-cart-btn w-full bg-muted-forest text-soft-white font-medium py-2.5 px-4 rounded-md hover:opacity-90 transition-opacity text-sm flex items-center justify-center">
+                        <i data-lucide="shopping-cart" class="w-4 h-4 mr-1.5"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3: 16oz Double Wall Acrylic Tumbler -->
+            <div class="bg-white border border-light-grey/80 rounded-lg shadow-sm p-4 flex flex-col group text-center transition-all hover:shadow-lg hover:-translate-y-1">
+                <a href="pdp_acrylic_tumbler.html" class="block mb-4">
+                    <div class="aspect-square bg-stone-100 rounded-md overflow-hidden p-2">
+                        <img src="data:image/png;base64,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" 
+                             alt="16oz Double Wall Acrylic Tumbler" 
+                             class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                </a>
+                <h3 class="text-lg font-heading font-medium text-deep-charcoal mb-1">
+                    <a href="pdp_acrylic_tumbler.html" class="hover:text-muted-forest transition-colors">16oz Double Wall Acrylic Tumbler</a>
+                </h3>
+                <p class="text-base text-mid-grey mb-3">$14.00</p>
+                <div class="mt-auto pt-3">
+                    <a href="pdp_acrylic_tumbler.html" class="inline-block w-full bg-soft-white border border-mid-grey text-mid-grey font-medium py-2 px-4 rounded-md hover:bg-light-grey/50 hover:border-deep-charcoal hover:text-deep-charcoal transition-all duration-200 text-sm mb-2">
+                        View Details
+                    </a>
+                    <button 
+                        data-product-id="acrylictumbler16oz"
+                        data-product-name="16oz Double Wall Acrylic Tumbler"
+                        data-product-price="14.00"
+                        data-product-image="data:image/png;base64,..."
+                        class="add-to-cart-btn w-full bg-muted-forest text-soft-white font-medium py-2.5 px-4 rounded-md hover:opacity-90 transition-opacity text-sm flex items-center justify-center">
+                        <i data-lucide="shopping-cart" class="w-4 h-4 mr-1.5"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4: 460ml Insulated Coffee Mug -->
+            <div class="bg-white border border-light-grey/80 rounded-lg shadow-sm p-4 flex flex-col group text-center transition-all hover:shadow-lg hover:-translate-y-1">
+                <a href="pdp_coffee_mug.html" class="block mb-4">
+                    <div class="aspect-square bg-stone-100 rounded-md overflow-hidden p-2">
+                        <img src="data:image/png;base64,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" 
+                             alt="460ml Insulated Coffee Mug" 
+                             class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                </a>
+                <h3 class="text-lg font-heading font-medium text-deep-charcoal mb-1">
+                    <a href="pdp_coffee_mug.html" class="hover:text-muted-forest transition-colors">460ml Insulated Coffee Mug</a>
+                </h3>
+                <p class="text-base text-mid-grey mb-3">$17.00</p>
+                <div class="mt-auto pt-3">
+                    <a href="pdp_coffee_mug.html" class="inline-block w-full bg-soft-white border border-mid-grey text-mid-grey font-medium py-2 px-4 rounded-md hover:bg-light-grey/50 hover:border-deep-charcoal hover:text-deep-charcoal transition-all duration-200 text-sm mb-2">
+                        View Details
+                    </a>
+                    <button 
+                        data-product-id="coffeemug460ml"
+                        data-product-name="460ml Insulated Coffee Mug"
+                        data-product-price="17.00"
+                        data-product-image="data:image/png;base64,..."
+                        class="add-to-cart-btn w-full bg-muted-forest text-soft-white font-medium py-2.5 px-4 rounded-md hover:opacity-90 transition-opacity text-sm flex items-center justify-center">
+                        <i data-lucide="shopping-cart" class="w-4 h-4 mr-1.5"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal text-light-grey/70 py-12 mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h4 class="font-heading text-lg text-soft-white mb-3">Essential Form Goods</h4>
+                    <p class="text-sm">&copy; 2025 Essential Form Goods. <br>All rights reserved.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg text-soft-white mb-3">Navigate</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="shop_all.html" class="footer-link">Shop All</a></li>
+                        <li><a href="placeholder_pages/about_us.html" class="footer-link">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg text-soft-white mb-3">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="placeholder_pages/contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="placeholder_pages/faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="placeholder_pages/shipping_returns.html" class="footer-link">Shipping & Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-mid-grey/30 pt-8 text-center text-sm">
+                <p>Quality Unseen. Quality Felt.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden z-[100] flex items-center justify-center p-4">
+        <div class="bg-soft-white w-full max-w-lg rounded-lg shadow-xl flex flex-col max-h-[90vh]">
+            <div class="flex justify-between items-center p-6 border-b border-light-grey">
+                <h2 class="text-2xl font-heading text-deep-charcoal">Your Cart</h2>
+                <button id="close-cart-modal-button" aria-label="Close cart">
+                    <i data-lucide="x" class="w-7 h-7 text-deep-charcoal hover:text-muted-forest"></i>
+                </button>
+            </div>
+            <div id="cart-items-container" class="flex-grow overflow-y-auto p-6 space-y-4">
+                <p id="cart-empty-message" class="text-mid-grey text-center py-8">Your cart is empty.</p>
+            </div>
+            <div class="p-6 border-t border-light-grey space-y-4">
+                <div class="flex justify-between items-center text-lg font-medium">
+                    <span class="text-deep-charcoal">Subtotal:</span>
+                    <span id="cart-subtotal" class="text-deep-charcoal">$0.00</span>
+                </div>
+                <p class="text-xs text-mid-grey text-right">Shipping & taxes calculated at checkout.</p>
+                <button id="checkout-button" class="w-full bg-muted-forest text-soft-white font-medium py-3 px-6 rounded-md hover:opacity-90 transition-opacity text-base">
+                    Proceed to Checkout
+                </button>
+                <button id="continue-shopping-button" class="w-full text-center text-muted-forest font-medium py-2 hover:underline">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
